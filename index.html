@@ -19,14 +19,16 @@
   </head>
   <body>
     <div class="page one">
-      <header class="header">
-        <img
-          class="logo"
-          src="images/logo.svg"
-          width="140px"
-          height="auto"
-          alt="LoopStudio Logo"
-        />
+      <header class="header mobile">
+        <a class="logo-link" href="#">
+          <img
+            class="logo"
+            src="images/logo.svg"
+            width="140px"
+            height="auto"
+            alt="LoopStudio Logo"
+          />
+        </a>
         <nav class="nav">
           <img
             class="hamburger"
@@ -56,26 +58,54 @@
           <li class="links"><a href="#">SUPPORT</a></li>
         </ul>
       </div>
+      <header class="header desktop">
+        <a href="#">
+          <img
+            class="logo"
+            src="images/logo.svg"
+            width="140px"
+            height="auto"
+            alt="LoopStudio Logo"
+          />
+        </a>
+        <ul class="links-ul desktop">
+          <li class="links desktop"><a href="#">ABOUT</a></li>
+          <li class="links desktop"><a href="#">CAREERS</a></li>
+          <li class="links desktop"><a href="#">EVENTS</a></li>
+          <li class="links desktop"><a href="#">PRODUCTS</a></li>
+          <li class="links desktop"><a href="#">SUPPORT</a></li>
+        </ul>
+      </header>
       <div class="immersive-div">
         <p class="immersive-p">IMMERSIVE EXPERIENCES THAT DELIVER</p>
       </div>
     </div>
     <div class="page two">
-      <img
-        class="page-two-top-image"
-        src="images/mobile/image-interactive.jpg"
-        alt="a person wearing a virtual reality headset playing a game"
-        width="86%"
-        height="auto"
-      />
-      <p class="page-two title">THE LEADER IN INTERACTIVE VR</p>
-      <p class="founded-p">
-        Founded in 2011, Loopstudios has been producing world-class virtual
-        reality projects for some of the best companies around the globe. Our
-        award-winning creations have transformed businesses through digital
-        experiences that bind to their brand.
-      </p>
+      <div class="page-two-image-container">
+        <img
+          class="page-two-top-image"
+          src="images/mobile/image-interactive.jpg"
+          alt="a person wearing a virtual reality headset playing a game"
+          width="86%"
+          height="auto"
+        />
+        <div class="page-two-text-container desktop">
+          <p class="page-two title">THE LEADER IN INTERACTIVE VR</p>
+          <p class="founded-p">
+            Founded in 2011, Loopstudios has been producing world-class virtual
+            reality projects for some of the best companies around the globe.
+            Our award-winning creations have transformed businesses through
+            digital experiences that bind to their brand.
+          </p>
+        </div>
+      </div>
+
+      <div class="our-creations-desktop-container">
+        <p class="creations-title-desktop">OUR CREATIONS</p>
+        <button class="see-all-button-desktop">SEE ALL</button>
+      </div>
       <p class="creations-title">OUR CREATIONS</p>
+
       <div class="creations-container">
         <div class="creation-item one">
           <p class="creation-item-p">
@@ -129,17 +159,77 @@
             FISHEYE
           </p>
         </div>
-        <button class="see-all-button">SEE ALL</button>
       </div>
+      <!-- Creations Container Desktop: Start -->
+      <div class="creations-container-desktop">
+        <div class="creation-desktop-item one">
+          <p class="creation-desktop-item-p">
+            DEEP <br />
+            EARTH
+          </p>
+        </div>
+        <div class="creation-desktop-item two">
+          <!-- <div class="item-desktop-p-container"> -->
+          <p class="creation-desktop-item-p">
+            NIGHT <br />
+            ARCADE
+          </p>
+          <!-- </div> -->
+        </div>
+        <div class="creation-desktop-item three">
+          <p class="creation-desktop-item-p">
+            SOCCER <br />
+            TEAM VR
+          </p>
+        </div>
+        <div class="creation-desktop-item four">
+          <p class="creation-desktop-item-p grid">
+            THE <br />
+            GRID
+          </p>
+        </div>
+        <div class="creation-desktop-item five">
+          <p class="creation-desktop-item-p">
+            FROM UP <br />
+            ABOVE VR
+          </p>
+        </div>
+        <div class="creation-desktop-item six">
+          <p class="creation-desktop-item-p">
+            POCKET <br />
+            BOREALIS
+          </p>
+        </div>
+        <div class="creation-desktop-item seven curiosity">
+          <p class="creation-desktop-item-p">
+            THE <br />
+            CURIOSITY
+          </p>
+        </div>
+        <div class="creation-desktop-item eight">
+          <p class="creation-desktop-item-p">
+            MAKE IT <br />
+            FISHEYE
+          </p>
+        </div>
+      </div>
+      <!-- Creations Container Desktop: End -->
+      <button class="see-all-button">SEE ALL</button>
+      <!-- </div> -->
     </div>
+    <!-- Mobile Footer: Start -->
     <footer class="footer">
-      <img
-        class="footer-logo"
-        src="images/logo.svg"
-        width="144px"
-        height="auto"
-        alt="loopstudios logo"
-      />
+      <div class="footer-image-container">
+        <a href="#">
+          <img
+            class="footer-logo"
+            src="images/logo.svg"
+            width="144px"
+            height="auto"
+            alt="loopstudios logo"
+          />
+        </a>
+      </div>
       <ul class="footer-ul">
         <li class="footer-link"><a href="#">About</a></li>
         <li class="footer-link"><a href="#">Careers</a></li>
@@ -186,5 +276,8 @@
       </div>
       <p class="footer-copyright-p">© 2024 Loopstudios. All rights reserved.</p>
     </footer>
+    <!-- Mobile Footer: End -->
+    <!-- Desktop Footer: Start -->
+    <!-- Desktop Footer: End -->
   </body>
 </html>

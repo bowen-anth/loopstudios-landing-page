@@ -11,7 +11,41 @@ body {
 a {
   color: white;
   text-decoration: none;
+  position: relative;
 }
+
+a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.5rem;
+  width: 0;
+  height: 3px;
+  background-color: white;
+  transition: width 0.3s ease;
+  text-underline-offset: 1rem;
+}
+
+a:hover::after,
+a:focus::after {
+  width: 80%;
+  text-align: center;
+  left: 10%;
+}
+
+/* .logo-link:hover::after,
+.logo-link:focus::after {
+  width: 10%;
+  text-align: center;
+  left: 10%;
+} */
+
+/* a:hover,
+a:focus {
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-thickness: 3px;
+} */
 
 .page.one {
   height: 100vh;
@@ -126,11 +160,8 @@ a {
   margin-bottom: 5rem;
 }
 
-.item-p-container {
-  border: 1px solid white;
-}
-
-.creations-title {
+.creations-title,
+.creations-title-desktop {
   color: #000;
   text-align: center;
   font-family: "Josefin Sans";
@@ -248,7 +279,8 @@ a {
   margin: auto;
 }
 
-.see-all-button {
+.see-all-button,
+.see-all-button-desktop {
   width: 50%;
   height: 2.5rem;
   color: #000;
@@ -264,6 +296,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .footer {
@@ -271,13 +304,28 @@ a {
   height: 100%;
   flex-shrink: 0;
   padding: 4rem 2rem;
+  /* display: flex;
+  flex-direction: column; */
 }
 
 .footer-logo {
-  display: flex;
-  margin: auto;
-  margin-bottom: 2.5rem;
+  display: inline-block;
+  width: 144px;
+  text-align: center;
 }
+
+.footer-image-container {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+/* .footer-logo a:hover::after,
+.footer-logo a:focus::after {
+  width: 10%;
+  text-align: center;
+  left: 10%;
+} */
 
 .footer-ul {
   text-align: center;
@@ -307,4 +355,182 @@ a {
   font-weight: 400;
   line-height: 1.5625rem; /* 166.667% */
   text-align: center;
+}
+
+@media (max-width: 1400px) {
+  .header.desktop,
+  .creation-desktop-item-p {
+    display: none;
+  }
+}
+
+@media (min-width: 1400px) {
+  .header.mobile {
+    display: none;
+  }
+  .links-ul.desktop {
+    flex-direction: row;
+  }
+  .links.desktop {
+    color: #fff;
+    font-family: "Alata";
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5625rem; /* 166.667% */
+  }
+  .immersive-p {
+    top: 15%;
+    left: 5%;
+    width: 35.625rem;
+    height: 12.375rem;
+    flex-shrink: 0;
+  }
+  .page-two-image-container {
+    position: relative;
+  }
+  .page-two-top-image {
+    width: 55.5625rem;
+    height: 31.25rem;
+    flex-shrink: 0;
+    margin-left: 5rem;
+  }
+  .page-two-text-container.desktop {
+    width: 33.8125rem;
+    height: 19.8125rem;
+    flex-shrink: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    /* border: 1px solid green; */
+    background-color: white;
+    padding: 3rem;
+    margin-right: 5rem;
+  }
+  .founded-p {
+    width: 27.8125rem;
+  }
+  .creations-title,
+  .see-all-button {
+    display: none;
+  }
+  .our-creations-desktop-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+    padding: 0 2rem;
+  }
+  .creations-title-desktop {
+    margin: 0;
+    padding: 0;
+  }
+  .see-all-button-desktop {
+    width: 9.8125rem;
+    height: 2.5rem;
+    flex-shrink: 0;
+    margin: 0;
+  }
+  .creations-container {
+    display: none;
+  }
+  .creations-container-desktop {
+    display: grid;
+    padding: 3rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 5rem;
+  }
+  .creation-desktop-item {
+    width: 16rem;
+    height: 28.125rem;
+    display: flex;
+    margin: 0 auto;
+  }
+  .creation-desktop-item.one {
+    background-image: url("images/desktop/image-deep-earth.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  /* .creation-item.two .creation-item-p {
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.6) 100%
+    );
+  } */
+
+  .creation-desktop-item.two {
+    background-color: rgba(0, 0, 0, 0.1);
+    background-image: url("images/desktop/image-night-arcade.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url("images/desktop/image-night-arcade.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .creation-desktop-item.three {
+    background-image: url("images/desktop/image-soccer-team.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .creation-desktop-item.four {
+    background-image: url("images/desktop/image-grid.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .creation-desktop-item.five {
+    background-image: url("images/desktop/image-from-above.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .creation-desktop-item.six {
+    background-image: url("images/desktop/image-pocket-borealis.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .creation-desktop-item.seven {
+    background: rgba(255, 255, 255, 0.75);
+    background-image: url("images/desktop/image-curiosity.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .creation-desktop-item.eight {
+    background-image: url("images/desktop/image-fisheye.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .creation-desktop-item-p {
+    color: #fff;
+    font-family: Josefin Sans;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 2rem; /* 100% */
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+  }
+  .creation-desktop-item-p.grid {
+    margin-left: 3rem;
+  }
 }
