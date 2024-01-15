@@ -197,14 +197,6 @@ a:focus {
   display: flex;
 }
 
-/* .creation-item.two .creation-item-p {
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0.6) 100%
-  );
-} */
-
 .creation-item.two {
   background-color: rgba(0, 0, 0, 0.1);
   background-image: url("images/mobile/image-night-arcade.jpg");
@@ -359,13 +351,15 @@ a:focus {
 
 @media (max-width: 1400px) {
   .header.desktop,
-  .creation-desktop-item-p {
+  .creation-desktop-item-p,
+  .footer-desktop {
     display: none;
   }
 }
 
 @media (min-width: 1400px) {
-  .header.mobile {
+  .header.mobile,
+  .footer {
     display: none;
   }
   .links-ul.desktop {
@@ -532,5 +526,35 @@ a:focus {
   }
   .creation-desktop-item-p.grid {
     margin-left: 3rem;
+  }
+  .footer-desktop {
+    background-color: black;
+    padding: 3rem;
+  }
+  .footer-top-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .item-container-desktop {
+    display: flex;
+    gap: 1rem;
+  }
+  .desktop-item-container ul {
+    display: flex;
+    gap: 2rem;
+  }
+  .footer-desktop-copyright {
+    color: #fff;
+    font-family: "Alata";
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5625rem; /* 166.667% */
+    opacity: 0.5;
+  }
+  .footer-bottom-container {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
   }
 }
