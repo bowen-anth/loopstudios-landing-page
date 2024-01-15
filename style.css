@@ -57,6 +57,10 @@ a:focus::after {
   padding: 1.5rem;
 }
 
+.hamburger-menu-icon {
+  cursor: pointer;
+}
+
 .logo {
   width: 140px;
 }
@@ -113,6 +117,7 @@ a:focus::after {
   font-size: 1.25rem;
   color: white;
   background-color: black;
+  cursor: pointer;
 }
 
 .page-two-top-image {
@@ -722,5 +727,65 @@ a:focus::after {
     margin-top: 2rem;
     display: flex;
     justify-content: space-between;
+  }
+}
+
+@media (min-width: 1500px) {
+  .our-creations-desktop-container {
+    flex-direction: space-around;
+    width: 40%;
+    margin: auto;
+  }
+  .creations-container-desktop {
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(2, auto);
+  }
+  .page-two-image-container {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 3rem;
+  }
+  .page-two-top-image {
+    margin: auto;
+  }
+  .page-two-text-container.desktop {
+    position: static;
+    text-align: center;
+    margin: auto;
+  }
+  .page-two.title {
+    margin: 0;
+    margin-bottom: 2rem;
+  }
+  .footer-desktop {
+    padding-left: 15vw;
+    padding-right: 15vw;
+  }
+  .item-container-desktop {
+    gap: 2rem;
+  }
+  .header.desktop {
+    padding-left: 15vw;
+    padding-right: 15vw;
+  }
+
+  .immersive-p {
+    position: static;
+    margin: 0;
+    margin-left: 15vw;
+    margin-top: 4rem;
+    width: 40rem;
+    height: 24rem;
+    color: #fff;
+    font-family: "Josefin Sans";
+    font-size: 4.5rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 4.375rem;
+    display: flex;
+    align-items: center;
   }
 }

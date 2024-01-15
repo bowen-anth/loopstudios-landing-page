@@ -1,7 +1,6 @@
 const hamburger = document.querySelector(".hamburger");
 const closeButton = document.querySelector(".close-button");
 const hamburgerContainer = document.querySelector(".hamburger-open-container");
-const images = document.querySelectorAll(".creations-container-desktop");
 
 let hamburgerContainerDisplay = false;
 
@@ -21,12 +20,6 @@ const closeHamburgerOutsideClick = (event) => {
     hamburgerContainerDisplay = false;
   }
 };
-
-images.forEach((image) => {
-  image.addEventListener("mouseover", (event) => {
-    console.log(event.target);
-  });
-});
 
 closeButton.addEventListener("click", toggleHamburger);
 hamburger.addEventListener("click", toggleHamburger);
